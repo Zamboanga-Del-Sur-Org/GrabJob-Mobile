@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background Circle with Gradient -->
+    <path
+        android:pathData="M54,14C31.91,14 14,31.91 14,54C14,76.09 31.91,94 54,94C76.09,94 94,76.09 94,54C94,31.91 76.09,14 54,14Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="40">
+                <item android:offset="0" android:color="#FF10B981"/>
+                <item android:offset="0.6" android:color="#FF059669"/>
+                <item android:offset="1" android:color="#FF047857"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Inner Circle with Subtle Gradient -->
+    <path
+        android:pathData="M54,24C37.43,24 24,37.43 24,54C24,70.57 37.43,84 54,84C70.57,84 84,70.57 84,54C84,37.43 70.57,24 54,24Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="24"
+                android:startY="24"
+                android:endX="84"
+                android:endY="84">
+                <item android:offset="0" android:color="#FFFFFFFF"/>
+                <item android:offset="1" android:color="#FFD1FAE5"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Gear Icon with Metallic Effect -->
+    <path
+        android:pathData="M54,38C45.16,38 38,45.16 38,54C38,62.84 45.16,70 54,70C62.84,70 70,62.84 70,54C70,45.16 62.84,38 54,38ZM54,66C47.37,66 42,60.63 42,54C42,47.37 47.37,42 54,42C60.63,42 66,47.37 66,54C66,60.63 60.63,66 54,66Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="sweep"
+                android:centerX="54"
+                android:centerY="54">
+                <item android:offset="0" android:color="#FF10B981"/>
+                <item android:offset="0.5" android:color="#FF059669"/>
+                <item android:offset="1" android:color="#FF047857"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Gear Teeth with Dynamic Gradient -->
+    <path
+        android:pathData="M57.5,35.5V40.5C57.5,40.5 58.84,40.84 60.09,41.34L63.59,37.84C61.84,36.84 59.84,36.09 57.5,35.5ZM66.16,44.41L62.66,47.91C63.16,49.16 63.5,50.5 63.5,50.5H68.5C68.41,48.16 67.66,46.16 66.16,44.41ZM63.5,57.5C63.5,57.5 63.16,58.84 62.66,60.09L66.16,63.59C67.16,61.84 67.91,59.84 68.5,57.5H63.5ZM60.09,66.66C58.84,67.16 57.5,67.5 57.5,67.5V72.5C59.84,72.41 61.84,71.66 63.59,70.16L60.09,66.66ZM50.5,67.5C50.5,67.5 49.16,67.16 47.91,66.66L44.41,70.16C46.16,71.16 48.16,71.91 50.5,72.5V67.5ZM41.84,63.59L45.34,60.09C44.84,58.84 44.5,57.5 44.5,57.5H39.5C39.59,59.84 40.34,61.84 41.84,63.59ZM44.5,50.5C44.5,50.5 44.84,49.16 45.34,47.91L41.84,44.41C40.84,46.16 40.09,48.16 39.5,50.5H44.5ZM47.91,41.34C49.16,40.84 50.5,40.5 50.5,40.5V35.5C48.16,35.59 46.16,36.34 44.41,37.84L47.91,41.34Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="sweep"
+                android:centerX="54"
+                android:centerY="54">
+                <item android:offset="0" android:color="#FF10B981"/>
+                <item android:offset="0.3" android:color="#FF059669"/>
+                <item android:offset="1" android:color="#FF047857"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Search Handle with Glossy Effect -->
+    <path
+        android:pathData="M82,78L70,66C71.79,63.91 73,61.09 73,58C73,51.37 67.63,46 61,46C54.37,46 49,51.37 49,58C49,64.63 54.37,70 61,70C64.09,70 66.91,68.79 69,67L81,79C81.39,79.39 81.9,79.58 82.42,79.58C82.94,79.58 83.45,79.39 83.84,79C84.61,78.23 84.61,77 82,78Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="49"
+                android:startY="46"
+                android:endX="84"
+                android:endY="81">
+                <item android:offset="0" android:color="#FF10B981"/>
+                <item android:offset="0.5" android:color="#FF059669"/>
+                <item android:offset="1" android:color="#FF047857"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Highlight Overlay -->
+    <path
+        android:pathData="M54,24C37.43,24 24,37.43 24,54C24,70.57 37.43,84 54,84C70.57,84 84,70.57 84,54C84,37.43 70.57,24 54,24Z"
+        android:fillColor="#FFFFFF"
+        android:alpha="0.1"/>
+
+</vector>
