@@ -9,5 +9,12 @@
         <item name="android:windowBackground">@color/white</item>
         <item name="android:statusBarColor">@color/brand_primary</item>
         <item name="android:navigationBarColor">@color/brand_primary</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <!-- Text Appearance Styles -->
+    <style name="TextAppearance.GrabJob.Heading" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>
