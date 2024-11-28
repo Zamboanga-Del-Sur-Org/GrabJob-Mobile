@@ -10,12 +10,18 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.dev.grabjob.ui.screens.DashboardScreen
+import com.dev.grabjob.ui.screens.registration.RegistrationScreen
 import com.dev.grabjob.ui.screens.splash.AnimatedSplashScreen
 import com.dev.grabjob.ui.theme.GrabJobTheme
+import kotlinx.coroutines.launch
 
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        installSplashScreen()
+        var keepSplashScreen = true
+        installSplashScreen().setKeepOnScreenCondition { keepSplashScreen }
         super.onCreate(savedInstanceState)
         
         setContent {
@@ -24,14 +30,31 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    var showSplash by remember { mutableStateOf(true) }
+                    var currentScreen by remember { mutableStateOf("splash") }
                     
-                    if (showSplash) {
-                        AnimatedSplashScreen {
-                            showSplash = false
+                    when (currentScreen) {
+                        "splash" -> {
+                            AnimatedSplashScreen {
+                                currentScreen = "registration"
+                                keepSplashScreen = false
+                            }
                         }
-                    } else {
-                        DashboardScreen()
+                        "registration" -> {
+                            LaunchedEffect(Unit) {
+                                keepSplashScreen = false
+                            }
+                            RegistrationScreen(
+                                onRegistrationComplete = {
+                                    currentScreen = "dashboard"
+                                }
+                            )
+                        }
+                        "dashboard" -> {
+                            LaunchedEffect(Unit) {
+                                keepSplashScreen = false
+                            }
+                            DashboardScreen()
+                        }
                     }
                 }
             }
